@@ -1,2 +1,3 @@
-<p>loging out...</p>
+<p *ngIf="!canRedirect;else redirectElement">logging out...</p>
+<ng-template #redirectElement>Click <span class="text-button" (click)="redirectToApp()">here</span> to go back to {{clientName}}.</ng-template>
 <div style="visibility: hidden;" id="logout-iframe"></div>

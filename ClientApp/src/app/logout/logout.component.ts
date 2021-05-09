@@ -9,10 +9,16 @@ import { AuthorizeService } from '../authorize.service';
 })
 export class LogoutComponent implements OnInit {
 
+  postLogoutUri: string;
+  canRedirect: boolean;
+  clientName: string;
+
   constructor(
     private authorizeService: AuthorizeService,
     private activatedRoute: ActivatedRoute
-  ) { }
+  ) { 
+    this.canRedirect = false;
+  }
 
   ngOnInit() {
     console.log("Query Params", this.activatedRoute.snapshot.queryParams);
@@ -24,7 +30,7 @@ export class LogoutComponent implements OnInit {
   private logout(logoutId: string): void {
     this.authorizeService.signOut(logoutId).subscribe(response => {
       console.log("Logout Response", response);
-      
+
       if (response.signOutIFrameUrl) {
         var iframe = document.createElement('iframe');
         iframe.width = '0';
@@ -34,11 +40,17 @@ export class LogoutComponent implements OnInit {
       }
 
       if (response.postLogoutRedirectUri) {
-        window.location.href = response.postLogoutRedirectUri;
+        this.postLogoutUri = response.postLogoutRedirectUri;
+        this.clientName = response.clientName;
+        this.canRedirect = true;
       } else {
-        console.log("You are successfully logged out.");
+        console.log("successfully logged out.");
       }
     });
+  }
+
+  public redirectToApp(): void {
+    window.location.href = this.postLogoutUri;
   }
 
 }

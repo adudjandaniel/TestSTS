@@ -1,0 +1,104 @@
+.main-content-wrapper {
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main-content {
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.no-margin {
+    margin: 0px;
+}
+.font-small {
+    font-size: 0.7em;
+}
+.content-heading {
+    width: 40%;
+}
+.heading-static {
+    color: #707070;
+    font-weight: normal;
+    font-size: 1.2em;
+}
+.client-name-text {
+    font-size: 1.5em;
+}
+.register-prompt {
+    font-size: small;
+    color: #707070;
+}
+.register-prompt a,
+.content-sign-in a {
+    color: #000000;
+    font-weight: bold;
+}
+.content-sign-in {
+    min-width: 30%;
+}
+.content-sign-in div {
+    margin: 1.5em 0;
+}
+.content-sign-in label {
+    color: #000000;
+    margin: 0.4em 0;
+}
+.content-sign-in input {
+    border: none;
+    border: 1px solid rgb(0, 0, 0);
+    border-color: rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    width: 100%;
+    padding: 7px 5px;
+}
+.page-button {
+    border-radius: 15px;
+    padding: 0.5em;
+    width: 100%;
+    font-size: small;
+}
+.sign-in-button {
+    color: #ffffff;
+    border: none;
+    background-color: #000000;
+    padding: 1.2em;
+    margin-top: 10px;
+}
+.sign-in-button:focus,
+.sign-in-button:hover {
+    outline: none;
+    box-shadow: 0 0 30px rgb(0, 0, 0);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+}
+hr {
+    margin: 2em 0;
+}
+p.password-reset-section {
+    text-align: right;
+}
+.third-party-sign-in button {
+    background-color: #ffffff;
+    border-width: 1px;
+    border-color:#707070d0;
+    color: #707070;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.third-party-sign-in button:focus,
+.third-party-sign-in button:hover {
+    outline: none;
+    border-color:rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
+}
+.third-party-sign-in .logo {
+    width: 1.3em;
+    margin-right: 5px;
+}

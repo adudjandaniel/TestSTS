@@ -1,0 +1,38 @@
+<div class="main-content-wrapper">
+    <div class="main-content">
+        <div class="content-heading">
+            <div>
+                <h1>
+                    <p class="no-margin heading-static">Log In</p>
+                    <p class="no-margin heading-static">To</p>
+                    <p class="no-margin client-name-text">{{ clientName }}</p>
+                </h1>
+                <p class="no-margin register-prompt">Don't have an account yet? <a href="/">Create One</a></p>
+            </div>
+        </div>
+        <div class="content-sign-in">
+            <div class="email-input-section">
+                <label class="no-margin" for="email">username</label>
+                <input #username type="text" id="username" name="username">
+            </div>
+            <div class="password-input-section">
+                <label class="no-margin" for="password">Password</label>
+                <br>
+                <input #password type="password" id="password" name="password">
+                <p class="no-margin font-small password-reset-section">Forgot Password? <a href="/">Reset</a></p>
+            </div>
+            <div>
+                <button class="page-button sign-in-button" (click)="login(username.value, password.value)">Sign In</button>
+            </div>
+            <hr>
+            <div class="third-party-sign-in">
+                <div class="google-section">
+                    <button class="page-button"><img class="logo" src="/assets/google.png" alt="google-logo" /><span>Sign in with Google</span></button>
+                </div>
+                <div class="facebook-section">
+                    <button class="page-button"><img class="logo" src="/assets/facebook.png" alt="facebook-logo" />Sign in with Facebook</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

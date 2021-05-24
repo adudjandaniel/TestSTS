@@ -39,6 +39,7 @@ namespace TestSTS
                 .AddInMemoryClients(IdSConfig.GetClients())
                 .AddInMemoryIdentityResources(IdSConfig.GetIdentityResources());
 
+            // This is already done in AddInMemoryClients
             services.AddCors(options =>
             {
                 options.AddDefaultPolicy(
